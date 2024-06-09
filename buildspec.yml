@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - npm install aws-cdk -g
+      - cdk ls
+      - cdk synth
+      # - cdk bootstrap
+      - ls -la
+  post_build:
+    commands:
+      - cdk deploy --require-approval=never 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        table.gridjs-table {
+            table-layout: auto;
+        }
+
+        .gridjs-table th {
+            font-size: small
+                /* adjust this value as needed */
+        }
+
+        .gridjs-table td[data-column-id="projectName"] {
+            font-size: small;
+            /* adjust this value as needed */
+        }
+
+        th:first-child,
+        td:first-child {
+            border-left: 0;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-right: 0;
+        }
+
+        tr:first-child th,
+        tr:first-child td {
+            border-top: 0;
+        }
+
+        tr:last-child th,
+        tr:last-child td {
+            border-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
