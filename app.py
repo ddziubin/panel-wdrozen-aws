@@ -5,7 +5,6 @@ from deployment_dashboard_app.deployment_dashboard_app_stack import (
     DeploymentDashboardAppStack,
 )
 
-
 app = cdk.App()
 DeploymentDashboardAppStack(
     app,
