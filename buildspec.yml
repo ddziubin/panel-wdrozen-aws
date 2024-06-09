@@ -8,7 +8,6 @@ phases:
       - npm install aws-cdk -g
       - cdk ls
       - cdk synth
-      # - cdk bootstrap
       - ls -la
   post_build:
     commands:
