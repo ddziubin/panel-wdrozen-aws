@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Module contains lambda to fetch the codepipeline execution status for all pipelines within and account and then
-upload it to an S3 Bucket"""
+"""Moduł zawiera funkcje Lambda do pobierania informacji na temat CodePipeline, 
+    a następnie przesyła wygenerowany plik json do S3 bucket"""
 import logging
-import os
 from concurrent.futures import ThreadPoolExecutor
 
 import boto3

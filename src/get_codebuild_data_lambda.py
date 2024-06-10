@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Module contains lambda to fetch the codebuild code coverage report and unit test report for all codebuild jobs
-then upload it to an s3 bucket"""
+"""Moduł zawiera funkcje Lambda do pobierania informacji na temat CodeBuild, 
+    a następnie przesyła wygenerowany plik json do S3 bucket"""
 import logging
 import os
 from concurrent.futures import ThreadPoolExecutor

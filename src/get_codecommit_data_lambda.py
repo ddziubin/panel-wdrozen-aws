@@ -1,3 +1,5 @@
+"""Moduł zawiera funkcje Lambda do pobierania informacji na temat CodeCommit, 
+    a następnie przesyła wygenerowany plik json do S3 bucket"""
 import boto3
 import logging
 from botocore.config import Config
