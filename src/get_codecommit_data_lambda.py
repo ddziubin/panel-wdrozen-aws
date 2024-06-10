@@ -181,7 +181,7 @@ def get_all_project_info(args):
 
 
 def lambda_handler(event, context):
-    """Main handler to CICD Dashboard"""
+    """Main handler"""
 
     log.debug(context)
     log.info(event)
@@ -198,7 +198,6 @@ def lambda_handler(event, context):
             codecommit_client,
         )
         for repo in all_repos.get("repositories")
-        # if repo["repositoryName"] in REPO_LIST
     ]
     with ThreadPoolExecutor(max_workers=THREAD_WORKERS) as executor:
         results = list(executor.map(get_all_project_info, repository_names))
