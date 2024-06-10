@@ -1,6 +1,5 @@
-"""Contains some helper methods for Fetching Dashboard Reports"""
+"""Zawiera pomocne metody do otrzymywania i tworzenia danych dla aplikacji Panel wdrożeń"""
 import json
-
 import boto3
 
 
@@ -21,8 +20,8 @@ def dump_to_s3(data, bucket_name, file_name):
 
 def paginator(method, **kwargs):
     """
-    Paginator used with certain boto3 calls
-    when pagination is required
+    Paginator używany z niektórymi wywołaniami boto3,
+    gdy wymagana jest paginacja.
     """
     client = method.__self__
     iterator = client.get_paginator(method.__name__)
