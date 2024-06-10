@@ -107,7 +107,7 @@ def get_pull_requests(client, repository_name) -> list:
 
 
 def get_repository_tags(client, repository_name) -> list:
-    """Retrieve the Repository Tags for a specific Repository"""
+    """Pobiera tagi repozytorium dla określonego repozytorium"""
     try:
         relevant_tag_names = "test1,testtag,test_tag1"
         if relevant_tag_names:
@@ -123,8 +123,7 @@ def get_repository_tags(client, repository_name) -> list:
 
 
 def get_relevant_tags(relevant_tag_list: list, tags: dict) -> list:
-    """Filters the values of relevant CodeCommit Repository Tags into an set"""
-    # The relevant tag list is served from the config directory.
+    """Filtruje wartości odpowiednich tagów repozytorium CodeCommit do zbioru"""
     tags_set = set()
     if len(tags) > 0:
         relevant_tags = {
@@ -139,12 +138,12 @@ def get_relevant_tags(relevant_tag_list: list, tags: dict) -> list:
 
 
 def get_project_from_arn(arn):
-    """Adjust this function to extract the project part from your ARNs"""
+    """Przygotowywuje funkcję, aby wyodrębniała część projektu z ARN-ów"""
     return arn.split(":")[5]
 
 
 def get_all_project_info(args):
-    """Grab all the Codecommit data points for a specific project"""
+    """Pobiera wszystkie potrzebne dane z CodeCommit"""
     repo_name, codecommit_client = args
     log.info("Processing Repository: %s", repo_name)
 
