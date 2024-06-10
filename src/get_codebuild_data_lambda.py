@@ -2,11 +2,8 @@
 """Moduł zawiera funkcje Lambda do pobierania informacji na temat CodeBuild, 
     a następnie przesyła wygenerowany plik json do S3 bucket"""
 import logging
-import os
-from concurrent.futures import ThreadPoolExecutor
 
 import boto3
-from botocore.client import Config
 from botocore.exceptions import ClientError
 
 from helper import dump_to_s3, paginator
